@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watched - A Short Film</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+            color: #ddd;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .text-content {
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+            text-align: left;
+            margin-right: 20px;
+        }
+
+        .text-content h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #ff0000;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        }
+
+        .text-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #bbb;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff0000;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        }
+
+        .btn:hover {
+            background: #990000;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 90%;
+            max-width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-content {
+                text-align: center;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Watched</h1>
+            <p>A Short Film with a Movie Poster made using Da Vinci Resolve, Blender, and The Adobe Suite.</p>
+            <p>Created by <strong>Katie Sugrue</strong> (Student Number: <strong>20097677</strong>), 
+                this project demonstrates my ability to use the Production Pipeline, showcase my Video Production skills, 
+                and challenge myself by learning new technologies independently. I will also be implementing 3D and 2D animation into
+             this short film to showcase my skills within those sectors.</p>
+            <p>This Short Film highlights the dangers of social media and shows how dangerous it can be if you are not aware of internet safety.</p>
+            <!--<a href="#more" class="btn">Learn More</a>-->
+        </div>
+        <div class="image-container">
+            <img src="assets/20250214_094659.jpg" alt="Watched Movie Poster">
+        </div>
+    </div>
+
+</body>
+</html>
