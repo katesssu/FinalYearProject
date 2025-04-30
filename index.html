@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,8 +23,8 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
             padding: 20px;
+            margin: 40px 0;
         }
 
         .text-content {
@@ -79,6 +79,29 @@
             box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
         }
 
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .section-divider {
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, #1a1a1a);
+            width: 100%;
+        }
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -91,29 +114,11 @@
                 margin-bottom: 20px;
             }
         }
-
-
-     .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
     </style>
 </head>
 <body>
 
+    <!-- Info Section -->
     <div class="container">
         <div class="text-content">
             <h1>Watched</h1>
@@ -123,14 +128,16 @@
                 and challenge myself by learning new technologies independently. I will also be implementing 3D and 2D animation into
              this short film to showcase my skills within those sectors.</p>
             <p>This Short Film highlights the dangers of social media and shows how dangerous it can be if you are not aware of internet safety.</p>
-            <!--<a href="#more" class="btn">Learn More</a>-->
         </div>
         <div class="image-container">
             <img src="assets/20250214_094659.jpg" alt="Watched Movie Poster">
         </div>
     </div>
 
-     <!-- YouTube Video Section -->
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- YouTube Video Section -->
     <div class="container">
         <div class="text-content">
             <h1>Watch the Film</h1>
@@ -141,7 +148,6 @@
             </div>
         </div>
     </div>
-
 
 </body>
 </html>
