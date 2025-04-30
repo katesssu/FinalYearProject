@@ -21,7 +21,7 @@
     .container {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       padding: 20px;
       flex-wrap: wrap;
@@ -74,11 +74,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex: 0 0 300px;
     }
 
     .image-container img {
-      width: 90%;
-      max-width: 350px;
+      width: 100%;
+      max-width: 300px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
     }
@@ -115,7 +116,6 @@
 
       .text-content {
         text-align: center;
-        margin-right: 0;
       }
 
       .video-container {
@@ -127,8 +127,14 @@
 </head>
 <body>
 
-  <!-- Info Section -->
+  <!-- Info Section with Left and Right Image -->
   <div class="container">
+    <!-- Left Poster -->
+    <div class="image-container">
+      <img src="assets/Watched-Poster.png" alt="Watched Left Poster" />
+    </div>
+
+    <!-- Text Section -->
     <div class="text-content">
       <h1>Watched</h1>
       <p>A Short Film with a Movie Poster made using Da Vinci Resolve, Blender, and The Adobe Suite.</p>
@@ -138,8 +144,10 @@
          this short film to showcase my skills within those sectors.</p>
       <p>This Short Film highlights the dangers of social media and shows how dangerous it can be if you are not aware of internet safety.</p>
     </div>
+
+    <!-- Right Poster -->
     <div class="image-container">
-      <img src="assets/20250214_094659.jpg" alt="Watched Movie Poster" />
+      <img src="assets/20250214_094659.jpg" alt="Watched Right Poster" />
     </div>
   </div>
 
