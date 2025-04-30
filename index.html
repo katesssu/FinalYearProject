@@ -1,153 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watched - A Short Film</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Watched - A Short Film</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        body {
-            background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
-            color: #ddd;
-        }
+    body {
+      background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+      color: #ddd;
+    }
 
-        .container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            margin: 40px 0;
-        }
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin: 40px 0;
+    }
 
-        .text-content {
-            max-width: 600px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
-            text-align: left;
-            margin-right: 20px;
-        }
+    .text-content {
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+      text-align: left;
+      margin-right: 20px;
+    }
 
-        .text-content h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #ff0000;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-        }
+    .text-content h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #ff0000;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    }
 
-        .text-content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #bbb;
-        }
+    .text-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #bbb;
+    }
 
-        .btn {
-            display: inline-block;
-            background: #ff0000;
-            color: white;
-            padding: 12px 24px;
-            font-size: 1rem;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: 0.3s;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-        }
+    .btn {
+      display: inline-block;
+      background: #ff0000;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+      margin-top: 20px;
+    }
 
-        .btn:hover {
-            background: #990000;
-        }
+    .btn:hover {
+      background: #990000;
+    }
 
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .image-container img {
-            width: 90%;
-            max-width: 350px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
-        }
+    .image-container img {
+      width: 90%;
+      max-width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+    }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
-        }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+    }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-        .section-divider {
-            height: 60px;
-            background: linear-gradient(to bottom, transparent, #1a1a1a);
-            width: 100%;
-        }
+    .section-divider {
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, #1a1a1a);
+      width: 100%;
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                text-align: center;
-            }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
 
-            .text-content {
-                text-align: center;
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+      .text-content {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Info Section -->
-    <div class="container">
-        <div class="text-content">
-            <h1>Watched</h1>
-            <p>A Short Film with a Movie Poster made using Da Vinci Resolve, Blender, and The Adobe Suite.</p>
-            <p>Created by <strong>Katie Sugrue</strong> (Student Number: <strong>20097677</strong>), 
-                this project demonstrates my ability to use the Production Pipeline, showcase my Video Production skills, 
-                and challenge myself by learning new technologies independently. I will also be implementing 3D and 2D animation into
-             this short film to showcase my skills within those sectors.</p>
-            <p>This Short Film highlights the dangers of social media and shows how dangerous it can be if you are not aware of internet safety.</p>
-        </div>
-        <div class="image-container">
-            <img src="assets/20250214_094659.jpg" alt="Watched Movie Poster">
-        </div>
+  <!-- Info Section -->
+  <div class="container">
+    <div class="text-content">
+      <h1>Watched</h1>
+      <p>A Short Film with a Movie Poster made using Da Vinci Resolve, Blender, and The Adobe Suite.</p>
+      <p>Created by <strong>Katie Sugrue</strong> (Student Number: <strong>20097677</strong>), 
+         this project demonstrates my ability to use the Production Pipeline, showcase my Video Production skills, 
+         and challenge myself by learning new technologies independently. I will also be implementing 3D and 2D animation into
+         this short film to showcase my skills within those sectors.</p>
+      <p>This Short Film highlights the dangers of social media and shows how dangerous it can be if you are not aware of internet safety.</p>
     </div>
-
-    <!-- Section Divider -->
-    <div class="section-divider"></div>
-
-    <!-- YouTube Video Section -->
-    <div class="container">
-        <div class="text-content">
-            <h1>Watch the Film</h1>
-            <p>Experience the short film "Watched" in full. This piece explores the darker side of social media and online surveillance in a thought-provoking visual narrative.</p>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fz38p-T5BnE" 
-                        title="Watched - A Short Film" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
+    <div class="image-container">
+      <img src="assets/20250214_094659.jpg" alt="Watched Movie Poster" />
     </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <!-- YouTube Video Section -->
+  <div class="container">
+    <div class="text-content">
+      <h1>Watch the Film</h1>
+      <p>Experience the short film "Watched" in full. This piece explores the darker side of social media and online surveillance in a thought-provoking visual narrative.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fz38p-T5BnE" 
+                title="Watched - A Short Film" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <!-- PDF Download Section -->
+  <div class="container">
+    <div class="text-content">
+      <h1>Final Year Project Document</h1>
+      <p>Click below to view the full final year project document, which outlines the concept, research, planning, and technical processes involved in creating the short film <em>Watched</em>.</p>
+      <a class="btn" href="assets/FYPDocumentSEM2-FINAL-KATIESUGRUE.pdf" target="_blank">View PDF</a>
+    </div>
+  </div>
 
 </body>
 </html>
